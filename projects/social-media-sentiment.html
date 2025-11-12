@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title>Social Media Sentiment Analysis - A Technical Report by Natasha Xavier</title>
     <style>
         :root {
@@ -27,26 +28,95 @@
         }
 
         nav {
-            position: fixed;
-            top: 20px;
-            left: 20px;
-            z-index: 1000;
+            background-color: var(--bg-secondary);
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
         }
 
         nav a {
-            background-color: var(--bg-secondary);
             color: var(--accent-color);
             text-decoration: none;
             font-weight: 600;
             padding: 10px 15px;
             border-radius: 5px;
             transition: all 0.3s ease;
-            border: 1px solid var(--border-color);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
         nav a:hover {
-            background-color: var(--accent-color);
-            color: var(--bg-primary);
+            background-color: rgba(100, 255, 218, 0.1);
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 2px solid var(--border-color);
+            padding: 40px 20px 20px;
+            margin-top: 80px;
+            text-align: center;
+        }
+
+        footer h3 {
+            color: var(--accent-color);
+            margin: 0 0 10px 0;
+            border: none;
+            font-size: 1.5rem;
+        }
+
+        footer p {
+            color: var(--text-secondary);
+            margin: 5px 0;
+        }
+
+        footer .footer-links {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-links a {
+            color: var(--text-primary);
+            transition: color 0.3s ease;
+        }
+
+        footer .footer-links a:hover {
+            color: var(--accent-color);
+        }
+
+        footer .footer-social {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        footer .footer-social a {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        footer .footer-social a:hover {
+            transform: scale(1.2);
+        }
+
+        footer .footer-bottom {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         .header {
@@ -491,5 +561,31 @@ daily_results = sentiment_crew.kickoff()</code></pre>
         <li><strong>Aspect-Based Sentiment Analysis:</strong> Go deeper than just overall sentiment to understand what specific features of a product or service people are talking about (e.g., "The *camera* is amazing, but the *battery life* is poor").</li>
         <li><strong>Multi-lingual Support:</strong> Extend the model to analyze sentiment in other key languages.</li>
     </ul>
+
+    <!-- Footer -->
+    <footer>
+        <h3>Natasha Xavier</h3>
+        <p>Marketing & HR Professional</p>
+        <div class="footer-links">
+            <a href="../index.html#home">Home</a>
+            <a href="../index.html#about">About</a>
+            <a href="../index.html#projects">Projects</a>
+            <a href="../index.html#contact">Contact</a>
+        </div>
+        <div class="footer-social">
+            <a href="https://www.linkedin.com/in/natashaxavier-marketingspecialist/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="mailto:natashaxavier512@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="https://github.com/NatashaXav" target="_blank" rel="noopener">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Natasha Xavier. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
