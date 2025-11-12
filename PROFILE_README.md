@@ -32,37 +32,37 @@ Workday • ATS Platforms • Zapier • CRM Software • HRIS Systems • Recru
 
 ## Featured Projects
 
-### [Social Media Sentiment Analysis](https://github.com/natashaxavier/social-media-sentiment-analysis)
+### [Social Media Sentiment Analysis](https://github.com/natashaxav/social-media-sentiment-analysis)
 Automated brand monitoring system analyzing audience sentiment patterns using Gemini AI
 **Impact**: 87% accuracy | £5,000+ annual cost savings
 **Tech**: Gemini AI, NLP, Python, Automated Reporting
 [📊 View Technical Report](https://natashaxav.github.io/projects/social-media-sentiment.html)
 
-### [Customer Segmentation - RFM Analysis](https://github.com/natashaxavier/customer-segmentation-rfm)
+### [Customer Segmentation - RFM Analysis](https://github.com/natashaxav/customer-segmentation-rfm)
 Analyzed 973 customers across £685K revenue using behavioral clustering for personalized campaigns
 **Impact**: Improved retention | Targeted marketing strategies
 **Tech**: RFM Analysis, Python, Customer Analytics, Tableau
 [📊 View Technical Report](https://natashaxav.github.io/projects/customer-segmentation.html)
 
-### [AI Competitor Intelligence Analyzer](https://github.com/natashaxavier/ai-competitor-analyzer)
+### [AI Competitor Intelligence Analyzer](https://github.com/natashaxav/ai-competitor-analyzer)
 Deployed AI agents via CrewAI and Gemini to automate market intelligence gathering
 **Impact**: 20x ROI vs traditional research | 100+ hrs/month saved
 **Tech**: CrewAI, Gemini AI, Web Scraping, LLM Orchestration
 [📊 View Technical Report](https://natashaxav.github.io/projects/ai-competitor-analyzer.html)
 
-### [Marketing Content Generator](https://github.com/natashaxavier/marketing-content-generator)
+### [Marketing Content Generator](https://github.com/natashaxav/marketing-content-generator)
 Built AI-powered content system using Gemini AI for brand-aligned content creation
 **Impact**: 4x content output | 15 hrs/week saved
 **Tech**: Gemini AI, Prompt Engineering, SEO Optimization
 [📊 View Technical Report](https://natashaxav.github.io/projects/marketing-content-generator.html)
 
-### [HR Resume Screener](https://github.com/natashaxavier/hr-resume-screener)
+### [HR Resume Screener](https://github.com/natashaxav/hr-resume-screener)
 Automated candidate evaluation using AI-powered analysis for recruitment optimization
 **Impact**: 90% faster screening | 40% faster hiring
 **Tech**: Gemini AI, NLP, ATS Integration, GDPR-Compliant
 [📊 View Technical Report](https://natashaxav.github.io/projects/hr-resume-screener.html)
 
-### [Employee Engagement Analyzer](https://github.com/natashaxavier/employee-engagement-analyzer)
+### [Employee Engagement Analyzer](https://github.com/natashaxav/employee-engagement-analyzer)
 Implemented automated survey analysis using Gemini AI to identify retention risks
 **Impact**: 40 hrs/survey saved | Predictive retention insights
 **Tech**: Gemini AI, NLP, Sentiment Analysis, HRIS Integration

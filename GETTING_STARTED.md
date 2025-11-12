@@ -80,7 +80,7 @@ Your portfolio includes:
 In `index.html`, find and update:
 ```html
 <a href="https://linkedin.com/in/natashaxavier" target="_blank">
-<a href="https://github.com/natashaxavier" target="_blank">
+<a href="https://github.com/natashaxav" target="_blank">
 ```
 
 #### Verify All Information

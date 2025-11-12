@@ -24,7 +24,7 @@ Copy and paste these commands in your terminal:
 cd /Users/rj/Claude_code/natash
 
 # Add GitHub as remote (replace USERNAME with your actual GitHub username)
-git remote add origin https://github.com/natashaxavier/natashaxavier.github.io.git
+git remote add origin https://github.com/natashaxav/natashaxavier.github.io.git
 
 # Rename branch to 'main' (GitHub prefers 'main' over 'master')
 git branch -M main
@@ -39,7 +39,7 @@ git push -u origin main
 
 ## Step 3: Enable GitHub Pages (1 minute)
 
-1. Go to: https://github.com/natashaxavier/natashaxavier.github.io/settings/pages
+1. Go to: https://github.com/natashaxav/natashaxavier.github.io/settings/pages
 2. Under "Source": Select branch **main**
 3. Under "Folder": Select **/ (root)**
 4. Click "Save"
@@ -99,12 +99,12 @@ git push -u origin main
 ## GitHub Repo Links
 
 Your portfolio references these GitHub repositories (create them later):
-- https://github.com/natashaxavier/social-media-sentiment-analysis
-- https://github.com/natashaxavier/customer-segmentation-rfm
-- https://github.com/natashaxavier/ai-competitor-analyzer
-- https://github.com/natashaxavier/marketing-content-generator
-- https://github.com/natashaxavier/hr-resume-screener
-- https://github.com/natashaxavier/employee-engagement-analyzer
+- https://github.com/natashaxav/social-media-sentiment-analysis
+- https://github.com/natashaxav/customer-segmentation-rfm
+- https://github.com/natashaxav/ai-competitor-analyzer
+- https://github.com/natashaxav/marketing-content-generator
+- https://github.com/natashaxav/hr-resume-screener
+- https://github.com/natashaxav/employee-engagement-analyzer
 
 You can create these individual project repos later - the main portfolio will work without them.
 

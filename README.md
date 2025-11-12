@@ -79,7 +79,7 @@ This portfolio showcases my expertise in AI-driven automation for marketing and 
 git init
 
 # Add remote
-git remote add origin https://github.com/natashaxavier/natashaxavier.github.io.git
+git remote add origin https://github.com/natashaxav/natashaxavier.github.io.git
 
 # Stage all files
 git add .
@@ -112,7 +112,7 @@ git push -u origin main
 4. Copy content from `PROFILE_README.md` to the README
 5. Commit changes
 
-Your profile README will appear on https://github.com/natashaxavier
+Your profile README will appear on https://github.com/natashaxav
 
 ---
 

@@ -84,7 +84,7 @@ def create_resume():
     contact2.alignment = WD_PARAGRAPH_ALIGNMENT.CENTER
     add_hyperlink(contact2, 'LinkedIn', 'https://linkedin.com/in/natashaxavier-marketingspecialist')
     contact2.add_run(' | ').font.size = Pt(10)
-    add_hyperlink(contact2, 'GitHub', 'https://github.com/natashaxavier')
+    add_hyperlink(contact2, 'GitHub', 'https://github.com/natashaxav')
 
     # Add small spacing
     contact2.paragraph_format.space_after = Pt(6)
@@ -294,32 +294,32 @@ def create_resume():
     projects = [
         {
             'name': 'Social Media Sentiment Analysis',
-            'url': 'https://github.com/natashaxavier/social-media-sentiment-analysis',
+            'url': 'https://github.com/natashaxav/social-media-sentiment-analysis',
             'desc': 'Built NLP model analyzing 10,000 tweets with 87% accuracy using Python, NLTK, VADER, spaCy, and Transformers'
         },
         {
             'name': 'Customer Segmentation - RFM Analysis',
-            'url': 'https://github.com/natashaxavier/customer-segmentation-rfm',
+            'url': 'https://github.com/natashaxav/customer-segmentation-rfm',
             'desc': 'Segmented 973 customers using K-Means clustering and RFM methodology with Python and scikit-learn'
         },
         {
             'name': 'AI Competitor Intelligence Analyzer',
-            'url': 'https://github.com/natashaxavier/ai-competitor-analyzer',
+            'url': 'https://github.com/natashaxav/ai-competitor-analyzer',
             'desc': 'Deployed autonomous AI agent using CrewAI and Gemini for competitive intelligence automation'
         },
         {
             'name': 'Marketing Content Generator',
-            'url': 'https://github.com/natashaxavier/marketing-content-generator',
+            'url': 'https://github.com/natashaxav/marketing-content-generator',
             'desc': 'Engineered GPT-4 powered system for brand-aligned content creation with prompt engineering'
         },
         {
             'name': 'HR Resume Screener',
-            'url': 'https://github.com/natashaxavier/hr-resume-screener',
+            'url': 'https://github.com/natashaxav/hr-resume-screener',
             'desc': 'Developed NLP tool using spaCy and BERT for automated resume parsing and candidate matching'
         },
         {
             'name': 'Employee Engagement Analyzer',
-            'url': 'https://github.com/natashaxavier/employee-engagement-analyzer',
+            'url': 'https://github.com/natashaxav/employee-engagement-analyzer',
             'desc': 'Built sentiment analysis system using VADER, TextBlob, and BERTopic for employee survey analysis'
         }
     ]

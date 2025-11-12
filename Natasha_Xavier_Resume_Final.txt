@@ -1,5 +1,5 @@
 NATASHA XAVIER
-London, United Kingdom | Portfolio: natashaxav.github.io | GitHub: github.com/natashaxavier
+London, United Kingdom | Portfolio: natashaxav.github.io | GitHub: github.com/natashaxav
 natashaxavier512@gmail.com | linkedin.com/in/natashaxavier-marketingspecialist
 
 ─────────────────────────────────────────────────────────────────────────────
@@ -46,20 +46,20 @@ Human Resources Analyst | Walmart Global Tech, Bangalore, IN | October 2020 – 
 
 KEY PROJECTS
 
-Social Media Sentiment Analysis (github.com/natashaxavier/social-media-sentiment-analysis)
+Social Media Sentiment Analysis (github.com/natashaxav/social-media-sentiment-analysis)
 Automated brand monitoring system analyzing audience sentiment patterns using Gemini AI, achieving 87% accuracy and £5,000+ annual cost savings
 
-Customer Segmentation - RFM Analysis (github.com/natashaxavier/customer-segmentation-rfm)
+Customer Segmentation - RFM Analysis (github.com/natashaxav/customer-segmentation-rfm)
 Analyzed 973 customers across £685K revenue using behavioral clustering to enable personalized campaign strategies and improve retention
 
-AI Competitor Intelligence Analyzer (github.com/natashaxavier/ai-competitor-analyzer)
+AI Competitor Intelligence Analyzer (github.com/natashaxav/ai-competitor-analyzer)
 Deployed AI agents via CrewAI and Gemini to automate market intelligence gathering, delivering 20x ROI versus traditional research services
 
-Marketing Content Generator (github.com/natashaxavier/marketing-content-generator)
+Marketing Content Generator (github.com/natashaxav/marketing-content-generator)
 Built AI-powered content system using Gemini AI increasing brand-aligned output 4x and saving 15 hours weekly
 
-HR Resume Screener (github.com/natashaxavier/hr-resume-screener)
+HR Resume Screener (github.com/natashaxav/hr-resume-screener)
 Automated candidate evaluation using AI-powered analysis, reducing screening time 90% and accelerating hiring by 40%
 
-Employee Engagement Analyzer (github.com/natashaxavier/employee-engagement-analyzer)
+Employee Engagement Analyzer (github.com/natashaxav/employee-engagement-analyzer)
 Implemented automated survey analysis using Gemini AI to identify retention risks, saving 40 hours per survey cycle

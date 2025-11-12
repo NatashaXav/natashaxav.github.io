@@ -90,7 +90,7 @@ cd /Users/rj/Claude_code/natash
 git init
 
 # Add remote (replace with your actual GitHub repo URL)
-git remote add origin https://github.com/natashaxavier/natashaxavier.github.io.git
+git remote add origin https://github.com/natashaxav/natashaxavier.github.io.git
 
 # Stage all files
 git add .
@@ -136,7 +136,7 @@ git push -u origin main
 #### 3A. Test Resume PDF
 - [ ] Open PDF in Acrobat/Preview
 - [ ] Click portfolio link - should open natashaxav.github.io
-- [ ] Click GitHub link - should open github.com/natashaxavier
+- [ ] Click GitHub link - should open github.com/natashaxav
 - [ ] Click email link - should open email client
 - [ ] Click LinkedIn link - should open LinkedIn profile
 - [ ] Click all 6 project GitHub links - should work
@@ -151,7 +151,7 @@ git push -u origin main
 - [ ] Test on different browsers (Chrome, Safari, Firefox)
 
 #### 3C. Test GitHub Profile
-- [ ] Visit https://github.com/natashaxavier
+- [ ] Visit https://github.com/natashaxav
 - [ ] Verify profile README displays
 - [ ] Click all project links
 - [ ] Click portfolio website link

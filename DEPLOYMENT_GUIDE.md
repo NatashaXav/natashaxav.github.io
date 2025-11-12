@@ -59,7 +59,7 @@ For each project repo:
 ```bash
 cd project-repos/PROJECT_NAME
 git init
-git remote add origin https://YOUR_TOKEN@github.com/natashaxavier/PROJECT_NAME.git
+git remote add origin https://YOUR_TOKEN@github.com/natashaxav/PROJECT_NAME.git
 git add .
 git commit -m "Initial commit"
 git branch -M main

@@ -284,7 +284,7 @@ employee-engagement-analysis/
     <a href="projects/social-media-sentiment.html" class="btn-project-link">
         <i class="fas fa-external-link-alt"></i> View Full Project
     </a>
-    <a href="https://github.com/natashaxavier/social-media-sentiment" class="btn-github-link" target="_blank">
+    <a href="https://github.com/natashaxav/social-media-sentiment" class="btn-github-link" target="_blank">
         <i class="fab fa-github"></i> View Code
     </a>
 </div>

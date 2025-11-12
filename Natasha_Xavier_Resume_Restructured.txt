@@ -1,7 +1,7 @@
 NATASHA XAVIER
 London, United Kingdom
 natashaxavier512@gmail.com | linkedin.com/in/natashaxavier-marketingspecialist
-Portfolio: natashaxav.github.io | GitHub: github.com/natashaxavier
+Portfolio: natashaxav.github.io | GitHub: github.com/natashaxav
 
 ─────────────────────────────────────────────────────────────────────────────
 
@@ -47,20 +47,20 @@ Human Resources Analyst | Walmart Global Tech, Bangalore, IN | October 2020 – 
 
 KEY PROJECTS
 
-Social Media Sentiment Analysis (github.com/natashaxavier/social-media-sentiment-analysis)
+Social Media Sentiment Analysis (github.com/natashaxav/social-media-sentiment-analysis)
 Built NLP model analyzing 10,000 tweets with 87% accuracy using Python, NLTK, VADER, spaCy, and Transformers
 
-Customer Segmentation - RFM Analysis (github.com/natashaxavier/customer-segmentation-rfm)
+Customer Segmentation - RFM Analysis (github.com/natashaxav/customer-segmentation-rfm)
 Segmented 973 customers using K-Means clustering and RFM methodology with Python and scikit-learn
 
-AI Competitor Intelligence Analyzer (github.com/natashaxavier/ai-competitor-analyzer)
+AI Competitor Intelligence Analyzer (github.com/natashaxav/ai-competitor-analyzer)
 Deployed autonomous AI agent using CrewAI and Gemini for competitive intelligence automation
 
-Marketing Content Generator (github.com/natashaxavier/marketing-content-generator)
+Marketing Content Generator (github.com/natashaxav/marketing-content-generator)
 Engineered GPT-4 powered system for brand-aligned content creation with prompt engineering
 
-HR Resume Screener (github.com/natashaxavier/hr-resume-screener)
+HR Resume Screener (github.com/natashaxav/hr-resume-screener)
 Developed NLP tool using spaCy and BERT for automated resume parsing and candidate matching
 
-Employee Engagement Analyzer (github.com/natashaxavier/employee-engagement-analyzer)
+Employee Engagement Analyzer (github.com/natashaxav/employee-engagement-analyzer)
 Built sentiment analysis system using VADER, TextBlob, and BERTopic for employee survey analysis

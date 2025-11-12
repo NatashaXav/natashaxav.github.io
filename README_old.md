@@ -39,7 +39,7 @@ A world-class professional portfolio website showcasing marketing and HR experti
 
 1. **Clone the repository**
 ```bash
-git clone https://github.com/natashaxavier/natasha-xavier-portfolio.git
+git clone https://github.com/natashaxav/natasha-xavier-portfolio.git
 cd natasha-xavier-portfolio
 ```
 
@@ -219,7 +219,7 @@ Marketing & HR Professional
 - 📱 Phone: +44 7984 749460
 - 🌍 Location: London, United Kingdom
 - 💼 LinkedIn: [linkedin.com/in/natashaxavier](https://linkedin.com/in/natashaxavier)
-- 🐙 GitHub: [github.com/natashaxavier](https://github.com/natashaxavier)
+- 🐙 GitHub: [github.com/natashaxav](https://github.com/natashaxav)
 
 ## 📄 License
 

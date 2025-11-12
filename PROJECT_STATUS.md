@@ -227,7 +227,7 @@ All 6 project reports dramatically enhanced with:
 2. ⏳ Create GitHub Profile README
 3. ⏳ Convert DOCX to PDF
 4. ⏳ Initialize git repository
-5. ⏳ Push to GitHub: github.com/natashaxavier
+5. ⏳ Push to GitHub: github.com/natashaxav
 6. ⏳ Enable GitHub Pages
 7. ⏳ Verify live site at natashaxavier.github.io
 

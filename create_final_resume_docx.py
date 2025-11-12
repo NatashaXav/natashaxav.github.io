@@ -58,7 +58,7 @@ def create_resume():
     contact.add_run('London, United Kingdom | ').font.size = Pt(10)
     add_hyperlink(contact, 'natashaxav.github.io', 'https://natashaxav.github.io')
     contact.add_run(' | ').font.size = Pt(10)
-    add_hyperlink(contact, 'github.com/natashaxavier', 'https://github.com/natashaxavier')
+    add_hyperlink(contact, 'github.com/natashaxav', 'https://github.com/natashaxav')
 
     # Contact line 2
     contact2 = doc.add_paragraph()
@@ -280,32 +280,32 @@ def create_resume():
     projects = [
         {
             'name': 'Social Media Sentiment Analysis',
-            'url': 'https://github.com/natashaxavier/social-media-sentiment-analysis',
+            'url': 'https://github.com/natashaxav/social-media-sentiment-analysis',
             'desc': 'Automated brand monitoring system analyzing audience sentiment patterns using Gemini AI, achieving 87% accuracy and £5,000+ annual cost savings'
         },
         {
             'name': 'Customer Segmentation - RFM Analysis',
-            'url': 'https://github.com/natashaxavier/customer-segmentation-rfm',
+            'url': 'https://github.com/natashaxav/customer-segmentation-rfm',
             'desc': 'Analyzed 973 customers across £685K revenue using behavioral clustering to enable personalized campaign strategies and improve retention'
         },
         {
             'name': 'AI Competitor Intelligence Analyzer',
-            'url': 'https://github.com/natashaxavier/ai-competitor-analyzer',
+            'url': 'https://github.com/natashaxav/ai-competitor-analyzer',
             'desc': 'Deployed AI agents via CrewAI and Gemini to automate market intelligence gathering, delivering 20x ROI versus traditional research services'
         },
         {
             'name': 'Marketing Content Generator',
-            'url': 'https://github.com/natashaxavier/marketing-content-generator',
+            'url': 'https://github.com/natashaxav/marketing-content-generator',
             'desc': 'Built AI-powered content system using Gemini AI increasing brand-aligned output 4x and saving 15 hours weekly'
         },
         {
             'name': 'HR Resume Screener',
-            'url': 'https://github.com/natashaxavier/hr-resume-screener',
+            'url': 'https://github.com/natashaxav/hr-resume-screener',
             'desc': 'Automated candidate evaluation using AI-powered analysis, reducing screening time 90% and accelerating hiring by 40%'
         },
         {
             'name': 'Employee Engagement Analyzer',
-            'url': 'https://github.com/natashaxavier/employee-engagement-analyzer',
+            'url': 'https://github.com/natashaxav/employee-engagement-analyzer',
             'desc': 'Implemented automated survey analysis using Gemini AI to identify retention risks, saving 40 hours per survey cycle'
         }
     ]
