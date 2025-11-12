@@ -1,0 +1,93 @@
+{
+  "workflow_name": "AI HR Resume Screener",
+  "description": "Automates the screening of resumes against job descriptions to score and rank candidates.",
+  "tools_compatible": ["Make.com", "Zapier", "n8n"],
+  "inputs": {
+    "resume_source": "Email attachment (e.g., Gmail) or ATS webhook (e.g., Greenhouse)",
+    "job_description": "Text input or URL to job posting",
+    "openai_api_key": "${OPENAI_API_KEY}",
+    "shortlist_threshold": 85
+  },
+  "steps": [
+    {
+      "id": 1,
+      "action": "trigger_new_application",
+      "tool": "Gmail / Greenhouse Webhook",
+      "config": {
+        "trigger": "New email with attachment in 'applications' folder OR New candidate added to role",
+        "output": "resume_file"
+      }
+    },
+    {
+      "id": 2,
+      "action": "parse_resume_text",
+      "tool": "Document Parser / Text Extractor",
+      "config": {
+        "file": "{{resume_file}}",
+        "output": "resume_text"
+      }
+    },
+    {
+      "id": 3,
+      "action": "analyze_and_score_resume",
+      "tool": "OpenAI GPT-4",
+      "config": {
+        "model": "gpt-4-turbo",
+        "prompt": "You are an expert HR recruiter for the UK market. Analyze the following resume against the provided job description. Provide a score out of 100 and a brief summary. Base the score on these weighted criteria:\n- Must-Have Skills (40%)\n- Relevant Work Experience (30%)\n- Education & Certifications (15%)\n- Quantifiable Achievements (15%)\n\nJob Description:\n{{job_description}}\n\nResume Text:\n{{resume_text}}\n\nFormat the output as a single, clean JSON object with keys: 'score', 'summary', 'extracted_skills', 'missing_skills', 'overall_assessment'.",
+        "output": "candidate_analysis_json"
+      }
+    },
+    {
+      "id": 4,
+      "action": "structure_candidate_data",
+      "tool": "Data Transformer",
+      "config": {
+        "input": ["{{candidate_analysis_json}}", "{{resume_file.applicant_email}}"],
+        "output_structure": {
+          "candidate_email": "{{resume_file.applicant_email}}",
+          "fit_score": "{{candidate_analysis_json.score}}",
+          "summary": "{{candidate_analysis_json.summary}}",
+          "assessment": "{{candidate_analysis_json.overall_assessment}}",
+          "matched_skills": "{{candidate_analysis_json.extracted_skills}}",
+          "missing_skills": "{{candidate_analysis_json.missing_skills}}"
+        },
+        "output": "structured_candidate"
+      }
+    },
+    {
+      "id": 5,
+      "action": "filter_shortlist",
+      "tool": "Filter / Router",
+      "config": {
+        "condition": "{{structured_candidate.fit_score}} >= {{shortlist_threshold}}",
+        "path_if_true": "Proceed to Shortlist",
+        "path_if_false": "Archive Candidate"
+      }
+    },
+    {
+      "id": 6,
+      "action": "add_to_shortlist_sheet",
+      "tool": "Google Sheets / Airtable",
+      "config": {
+        "spreadsheet": "Marketing Analyst - Shortlist",
+        "row_data": "{{structured_candidate}}",
+        "action": "append_row"
+      }
+    },
+    {
+      "id": 7,
+      "action": "notify_hiring_manager",
+      "tool": "Email / Slack",
+      "config": {
+        "to": "hiring.manager@company.com",
+        "subject": "New High-Potential Candidate for Marketing Analyst",
+        "body": "A new candidate has been screened and scored {{structured_candidate.fit_score}}% for the Marketing Analyst role.\n\nCandidate: {{structured_candidate.candidate_email}}\nAssessment: {{structured_candidate.assessment}}\n\nView the full shortlist here: [Link to Google Sheet]"
+      }
+    }
+  ],
+  "business_value": {
+    "time_saved": "20 hours/week of manual resume review",
+    "cost_reduction": "95% cost savings vs. manual screening effort",
+    "roi": "Reduces time-to-hire by 40%, improves quality of shortlist"
+  }
+}

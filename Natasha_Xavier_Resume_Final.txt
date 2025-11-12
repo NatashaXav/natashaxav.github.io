@@ -1,0 +1,65 @@
+NATASHA XAVIER
+London, United Kingdom | Portfolio: natashaxav.github.io | GitHub: github.com/natashaxavier
+natashaxavier512@gmail.com | linkedin.com/in/natashaxavier-marketingspecialist
+
+─────────────────────────────────────────────────────────────────────────────
+
+EDUCATION
+
+Master of Science, Marketing Management
+University of Westminster, London, UK | December 2023
+Relevant Coursework: Marketing Research Data Analytics, Multiplatform Marketing, Consumer Psychology, Digital Strategy
+
+Bachelor of Business Administration, International Business
+St. Joseph's College of Commerce, Bangalore, IN | June 2020
+Relevant Coursework: Marketing Management, Project Management, International Business, Strategic Planning
+
+─────────────────────────────────────────────────────────────────────────────
+
+TECHNICAL SKILLS
+
+• AI & Automation: CrewAI, LangChain, Gemini AI, Claude AI, automated reporting, sentiment analysis
+• Digital Marketing: SEMrush, Google Analytics, Hootsuite, Canva, campaign management, SEO optimization
+• Data & Analytics: Tableau, Excel, Google Data Studio, RFM analysis, customer segmentation
+• HR & CRM Tools: Workday, ATS platforms, Zapier, CRM software, HRIS systems
+
+─────────────────────────────────────────────────────────────────────────────
+
+PROFESSIONAL EXPERIENCE
+
+Social Media Marketing Intern | Pictures in Motion, London, UK | April 2024 – Present
+• Boosted engagement 25% and audience 20% through strategic content planning and performance tracking
+• Delivered weekly analytics reports identifying optimization opportunities for marketing campaigns
+• Coordinated with teams to maximize press visibility and audience reach for content launches
+
+Marketing Analyst | Grey Apple Advertising, Remote | February 2022 – February 2023
+• Increased organic lead generation 12% through strategic keyword research and content optimization
+• Delivered 150+ qualified leads per event through market analysis and strategic event planning
+• Enhanced brand engagement 25% through targeted audience campaigns and digital strategy
+
+Human Resources Analyst | Walmart Global Tech, Bangalore, IN | October 2020 – February 2022
+• Streamlined recruitment process by implementing automation system, reducing hiring time 23%
+• Designed compensation framework achieving 95% satisfaction and 10% lower staff turnover
+• Improved team engagement 15% through strategic feedback initiatives and communication programs
+
+─────────────────────────────────────────────────────────────────────────────
+
+KEY PROJECTS
+
+Social Media Sentiment Analysis (github.com/natashaxavier/social-media-sentiment-analysis)
+Automated brand monitoring system analyzing audience sentiment patterns using Gemini AI, achieving 87% accuracy and £5,000+ annual cost savings
+
+Customer Segmentation - RFM Analysis (github.com/natashaxavier/customer-segmentation-rfm)
+Analyzed 973 customers across £685K revenue using behavioral clustering to enable personalized campaign strategies and improve retention
+
+AI Competitor Intelligence Analyzer (github.com/natashaxavier/ai-competitor-analyzer)
+Deployed AI agents via CrewAI and Gemini to automate market intelligence gathering, delivering 20x ROI versus traditional research services
+
+Marketing Content Generator (github.com/natashaxavier/marketing-content-generator)
+Built AI-powered content system using Gemini AI increasing brand-aligned output 4x and saving 15 hours weekly
+
+HR Resume Screener (github.com/natashaxavier/hr-resume-screener)
+Automated candidate evaluation using AI-powered analysis, reducing screening time 90% and accelerating hiring by 40%
+
+Employee Engagement Analyzer (github.com/natashaxavier/employee-engagement-analyzer)
+Implemented automated survey analysis using Gemini AI to identify retention risks, saving 40 hours per survey cycle

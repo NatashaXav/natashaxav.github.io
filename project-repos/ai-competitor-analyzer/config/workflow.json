@@ -1,0 +1,77 @@
+{
+  "workflow_name": "Competitor Intelligence Analyzer",
+  "description": "Automated competitor monitoring using AI to extract positioning, pricing, and content strategies",
+  "tools_compatible": ["Make.com", "Zapier", "n8n"],
+  "inputs": {
+    "competitor_urls": ["https://competitor1.com", "https://competitor2.com"],
+    "analysis_frequency": "weekly",
+    "gemini_api_key": "${GEMINI_API_KEY}"
+  },
+  "steps": [
+    {
+      "id": 1,
+      "action": "scrape_website",
+      "tool": "HTTP Request / Web Scraper",
+      "config": {
+        "url": "{{competitor_url}}",
+        "extract": ["homepage_text", "pricing_page", "about_page"],
+        "output": "raw_html"
+      }
+    },
+    {
+      "id": 2,
+      "action": "clean_content",
+      "tool": "Text Processor",
+      "config": {
+        "input": "{{raw_html}}",
+        "remove": ["scripts", "styles", "navigation"],
+        "output": "clean_text"
+      }
+    },
+    {
+      "id": 3,
+      "action": "ai_analysis",
+      "tool": "Google Gemini",
+      "config": {
+        "model": "gemini-1.5-flash",
+        "prompt": "Analyze this competitor website content and extract:\n1. Value proposition (main message)\n2. Target audience (who they serve)\n3. Pricing strategy (if available)\n4. Key differentiators\n5. Content themes\n\nWebsite content:\n{{clean_text}}\n\nFormat as JSON.",
+        "output": "analysis_json"
+      }
+    },
+    {
+      "id": 4,
+      "action": "store_results",
+      "tool": "Google Sheets / Airtable",
+      "config": {
+        "spreadsheet": "Competitor Analysis Tracker",
+        "data": "{{analysis_json}}",
+        "timestamp": true
+      }
+    },
+    {
+      "id": 5,
+      "action": "generate_report",
+      "tool": "Google Gemini",
+      "config": {
+        "model": "gemini-1.5-flash",
+        "prompt": "Create a competitive intelligence summary comparing these analyses:\n{{all_competitor_analyses}}\n\nFocus on: market positioning gaps, pricing opportunities, content strategy insights.",
+        "output": "executive_summary"
+      }
+    },
+    {
+      "id": 6,
+      "action": "send_notification",
+      "tool": "Email / Slack",
+      "config": {
+        "to": "marketing_team@company.com",
+        "subject": "Weekly Competitor Intelligence Report",
+        "body": "{{executive_summary}}"
+      }
+    }
+  ],
+  "business_value": {
+    "time_saved": "10 hours/week manual research",
+    "cost": "$50/month (API calls)",
+    "roi": "20x (compared to agency research at $1000/report)"
+  }
+}

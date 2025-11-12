@@ -1,0 +1,116 @@
+{
+  "workflow_name": "AI Marketing Content Generator",
+  "description": "Automated content creation for blogs and social media using GPT-4",
+  "tools_compatible": ["Make.com", "Zapier", "n8n"],
+  "inputs": {
+    "content_brief_form": "Google Forms or Airtable",
+    "brand_voice_guidelines": "Stored in workflow variables",
+    "gemini_api_key": "${GEMINI_API_KEY}",
+    "target_platforms": ["WordPress", "LinkedIn", "Twitter", "Instagram"]
+  },
+  "steps": [
+    {
+      "id": 1,
+      "action": "trigger_new_content_request",
+      "tool": "Google Forms / Airtable Webhook",
+      "config": {
+        "trigger": "New form submission",
+        "fields_captured": ["topic", "target_keywords", "content_type", "tone"],
+        "output": "content_brief"
+      }
+    },
+    {
+      "id": 2,
+      "action": "research_topic",
+      "tool": "Google Gemini",
+      "config": {
+        "model": "gemini-1.5-flash",
+        "prompt": "Research this topic and provide 5 key statistics, 3 expert quotes, and 5 subtopics to cover:\\n\\nTopic: {{content_brief.topic}}\\nKeywords: {{content_brief.target_keywords}}\\n\\nProvide structured research that can be used to write a comprehensive article.",
+        "output": "research_data"
+      }
+    },
+    {
+      "id": 3,
+      "action": "generate_blog_post",
+      "tool": "Google Gemini",
+      "config": {
+        "model": "gemini-1.5-flash",
+        "prompt": "Write a 1200-word SEO-optimized blog post with the following specifications:\\n\\nTopic: {{content_brief.topic}}\\nTarget Keywords: {{content_brief.target_keywords}}\\nTone: {{content_brief.tone}}\\nResearch: {{research_data}}\\n\\nBrand Voice Guidelines:\\n- Professional yet approachable\\n- Data-driven with storytelling\\n- Action-oriented conclusions\\n- UK English spelling\\n\\nStructure:\\n- Compelling H1 title (include target keyword)\\n- Introduction with hook (150 words)\\n- 4-5 H2 sections with supporting H3s\\n- Include statistics from research\\n- Actionable conclusion\\n- Meta description (155 characters)\\n\\nSEO Requirements:\\n- Target keyword in first 100 words\\n- 2-3% keyword density\\n- Internal linking opportunities (note [LINK] where relevant)\\n- Include related keywords naturally",
+        "output": "blog_post_content"
+      }
+    },
+    {
+      "id": 4,
+      "action": "generate_social_media_posts",
+      "tool": "Google Gemini",
+      "config": {
+        "model": "gemini-1.5-flash",
+        "prompt": "Repurpose this blog post into social media content:\\n\\n{{blog_post_content}}\\n\\nGenerate:\\n1. 5 LinkedIn posts (varying angles: statistic highlight, question, case study, tip, CTA)\\n2. 10 Twitter/X posts (each under 280 chars, thread-worthy)\\n3. 3 Instagram captions (engaging, emoji-friendly, hashtag suggestions)\\n4. 1 Email newsletter snippet (150 words with CTA)\\n\\nFormat as JSON with platform, content, and character count.",
+        "output": "social_posts_json"
+      }
+    },
+    {
+      "id": 5,
+      "action": "quality_check_notification",
+      "tool": "Slack / Email",
+      "config": {
+        "to": "marketing_team@company.com",
+        "subject": "New AI-Generated Content Ready for Review",
+        "body": "Content generated for: {{content_brief.topic}}\\n\\nBlog Post: [Review Draft]\\nSocial Posts: {{social_posts_json}}\\n\\nPlease review and approve for publishing.",
+        "include_preview": true
+      }
+    },
+    {
+      "id": 6,
+      "action": "publish_blog_post",
+      "tool": "WordPress API",
+      "config": {
+        "status": "draft",
+        "title": "{{blog_post_content.title}}",
+        "content": "{{blog_post_content.body}}",
+        "meta_description": "{{blog_post_content.meta_description}}",
+        "tags": "{{content_brief.target_keywords}}",
+        "wait_for_approval": true
+      }
+    },
+    {
+      "id": 7,
+      "action": "schedule_social_posts",
+      "tool": "Buffer / Hootsuite API",
+      "config": {
+        "posts": "{{social_posts_json}}",
+        "schedule": "spread_over_7_days",
+        "optimal_times": true,
+        "platforms": ["linkedin", "twitter", "instagram"]
+      }
+    },
+    {
+      "id": 8,
+      "action": "log_results",
+      "tool": "Google Sheets / Airtable",
+      "config": {
+        "spreadsheet": "Content Production Tracker",
+        "data": {
+          "date": "{{timestamp}}",
+          "topic": "{{content_brief.topic}}",
+          "blog_url": "{{wordpress_url}}",
+          "social_posts_count": "{{social_posts_json.length}}",
+          "status": "Published",
+          "generation_time_seconds": "{{workflow_duration}}"
+        }
+      }
+    }
+  ],
+  "business_value": {
+    "time_saved": "15 hours/week manual content creation",
+    "cost": "£60/month (GPT-4 API)",
+    "output_increase": "4x more content (5 posts → 20 posts per week)",
+    "roi": "£17,480/year savings vs manual writing"
+  },
+  "compliance_notes": [
+    "Human review required for brand-critical content",
+    "Fact-check AI-generated statistics",
+    "Ensure compliance with advertising standards",
+    "Add proper disclosures if discussing products/services"
+  ]
+}

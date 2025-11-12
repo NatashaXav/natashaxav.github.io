@@ -1,0 +1,59 @@
+CUSTOMER SEGMENTATION - RFM ANALYSIS RESULTS
+============================================================
+
+Dataset: E-Commerce Transactions
+Transactions Analyzed: 31,234
+Unique Customers: 973
+Analysis Date: 2025-01-11
+
+SEGMENT DISTRIBUTION
+------------------------------------------------------------
+
+Potential:
+  Customers: 320 (32.9%)
+  Total Revenue: £173,782.82
+  Average Value: £543.07
+
+Lost:
+  Customers: 251 (25.8%)
+  Total Revenue: £107,946.53
+  Average Value: £430.07
+
+New Customers:
+  Customers: 137 (14.1%)
+  Total Revenue: £60,568.90
+  Average Value: £442.11
+
+Loyal:
+  Customers: 112 (11.5%)
+  Total Revenue: £165,254.37
+  Average Value: £1,475.49
+
+At Risk:
+  Customers: 106 (10.9%)
+  Total Revenue: £61,679.16
+  Average Value: £581.88
+
+Champions:
+  Customers: 47 (4.8%)
+  Total Revenue: £116,289.93
+  Average Value: £2,474.25
+
+
+RFM STATISTICS
+------------------------------------------------------------
+
+Recency (days since last purchase):
+  Mean: 24.6 days
+  Median: 27 days
+  Range: 1-40 days
+
+Frequency (number of purchases):
+  Mean: 32.1 purchases
+  Median: 19 purchases
+  Range: 1-682 purchases
+
+Monetary (total spend):
+  Mean: £704.54
+  Median: £341.90
+  Total Revenue: £685,521.71

@@ -1,0 +1,44 @@
+{
+  "job_description_file": "jd_marketing_analyst_uk.txt",
+  "screening_date": "2025-01-12T10:00:00Z",
+  "total_candidates_screened": 2,
+  "candidate_rankings": [
+    {
+      "fit_score": 92,
+      "summary": "Highly experienced Marketing Analyst with 5 years at a leading UK e-commerce firm. Strong proficiency in Google Analytics, SQL, and Tableau, with a track record of delivering data-driven growth strategies and achieving a 15% increase in campaign ROI.",
+      "extracted_skills": [
+        "Google Analytics",
+        "SQL",
+        "Tableau",
+        "A/B Testing",
+        "Market Research",
+        "SEO/SEM",
+        "Data Visualization"
+      ],
+      "missing_skills": [
+        "Python (mentioned as basic knowledge)"
+      ],
+      "overall_assessment": "Excellent fit. The candidate meets nearly all technical requirements and has significant, relevant experience in the UK market. The quantifiable achievements listed are impressive and directly align with the role's objectives.",
+      "resume_filename": "candidate_jane_doe.pdf",
+      "analysis_date": "2025-01-12T09:55:10Z"
+    },
+    {
+      "fit_score": 78,
+      "summary": "A recent graduate with a First-Class Honours degree in Marketing from the University of Manchester and a 1-year internship at a digital marketing agency. Proficient in Google Analytics and has foundational knowledge of SEO and A/B testing.",
+      "extracted_skills": [
+        "Google Analytics",
+        "Market Research",
+        "SEO/SEM (foundational)",
+        "Social Media Analytics"
+      ],
+      "missing_skills": [
+        "SQL",
+        "Tableau",
+        "3+ years of experience"
+      ],
+      "overall_assessment": "High-potential junior candidate. While lacking the required years of experience and advanced technical skills like SQL and Tableau, the candidate has a strong academic background and relevant internship experience. A good fit for a junior version of the role.",
+      "resume_filename": "candidate_john_smith.pdf",
+      "analysis_date": "2025-01-12T09:58:25Z"
+    }
+  ]
+}

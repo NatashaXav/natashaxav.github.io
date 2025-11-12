@@ -1,0 +1,55 @@
+SENTIMENT ANALYSIS - DETAILED RESULTS
+==================================================
+
+Dataset: Sentiment140 (Kaggle)
+Sample Size: 10,000 tweets
+Analysis Date: 2025-01-11
+
+SENTIMENT DISTRIBUTION
+--------------------------------------------------
+Negative: 5,000 tweets (50.0%)
+Positive: 5,000 tweets (50.0%)
+
+
+TEXT LENGTH STATISTICS
+--------------------------------------------------
+
+Negative Tweets:
+  Average Length: 75.3 characters
+  Median Length: 72 characters
+  Min Length: 6 characters
+  Max Length: 157 characters
+
+Positive Tweets:
+  Average Length: 75.5 characters
+  Median Length: 71 characters
+  Min Length: 8 characters
+  Max Length: 166 characters
+
+
+TOP WORDS IN NEGATIVE TWEETS
+--------------------------------------------------
+1. have: 521 occurrences
+2. that: 454 occurrences
+3. just: 400 occurrences
+4. this: 369 occurrences
+5. with: 347 occurrences
+6. work: 335 occurrences
+7. cant: 296 occurrences
+8. dont: 273 occurrences
+9. like: 240 occurrences
+10. today: 238 occurrences
+
+
+TOP WORDS IN POSITIVE TWEETS
+--------------------------------------------------
+1. that: 503 occurrences
+2. just: 413 occurrences
+3. good: 413 occurrences
+4. have: 410 occurrences
+5. with: 364 occurrences
+6. your: 287 occurrences
+7. this: 267 occurrences
+8. love: 255 occurrences
+9. like: 252 occurrences
+10. thanks: 211 occurrences

@@ -1,0 +1,105 @@
+Natasha Xavier
+London, United Kingdom | natashaxavier512@gmail.com | linkedin.com/in/natashaxavier-marketingspecialist | natashaxav.github.io
+
+---
+
+## PROFESSIONAL SUMMARY
+
+A results-driven Marketing and HR Analytics professional with a Master’s degree and extensive experience in the UK market. Expertly leverages AI, Python, and advanced data analytics to translate complex datasets into strategic insights that boost ROI, streamline operations, and enhance talent acquisition. Proven track record of developing and implementing data-driven solutions in competitive intelligence, customer segmentation, and people analytics, consistently delivering significant efficiency gains and cost savings.
+
+---
+
+## SKILLS
+
+**Technical:**
+- **Programming & Data Science:** Python (pandas, scikit-learn, NumPy), NLTK, spaCy, Transformers, SQL
+- **AI & Machine Learning:** NLP, Sentiment Analysis, Topic Modelling (LDA, BERTopic), RFM Analysis, K-Means Clustering, AI Agentic Frameworks (CrewAI, LangChain), LLMs (GPT-4, Gemini)
+- **Data Visualisation & BI:** Tableau, Chart.js, Plotly, Google Data Studio, Advanced Excel
+- **Marketing & HR Tech:** Google Analytics, SEMrush, Workday, Applicant Tracking Systems (ATS), Zapier
+
+**Marketing Analytics:**
+- Competitor Intelligence
+- Customer Segmentation & Lifetime Value
+- SEO & Keyword Analysis
+- Campaign Performance Optimisation
+- A/B Testing
+- Market Research
+
+**HR & People Analytics:**
+- Talent Acquisition Funnels
+- Employee Engagement & Attrition Analysis
+- HRIS & ATS Implementation
+- Performance Metrics & Dashboards
+- Compensation & Benefits Analysis
+- Candidate Screening & Matching
+
+---
+
+## PROFESSIONAL EXPERIENCE
+
+**Social Media Marketing Intern** | Pictures in Motion, London, UK
+*April 2024 – Present*
+- Increased social media engagement by 25% and grew audience by 20% in three months by developing and executing a data-informed content strategy aligned with brand voice.
+- Analysed campaign performance using Google Analytics and Hootsuite, delivering weekly and monthly reports that provided actionable insights for optimising marketing spend.
+- Collaborated with production, content, and PR teams to amplify press releases and drive real-time engagement for new TV show launches.
+
+**Marketing Analyst** | Grey Apple Advertising, Remote
+*February 2022 – February 2023*
+- Drove a 12% increase in organic leads by executing SEO strategies that improved website rankings for the top 10 target keywords by an average of 3 positions.
+- Generated over 150 qualified leads per event by planning and executing three high-impact media branding events based on detailed market trend analysis.
+- Enhanced customer engagement by 25% and brand sentiment by 15% by managing the creation of brand-aligned digital and OOH content and running targeted CRM campaigns.
+
+**Human Resources Analyst** | Walmart Global Tech, Bangalore, IN
+*October 2020 – February 2022*
+- Spearheaded the implementation of a new Applicant Tracking System (ATS) for a new tech hub, which automated workflows and reduced the average time-to-hire by 23%.
+- Developed competitive compensation strategies based on comprehensive market analysis, achieving 95% employee satisfaction and contributing to a 10% reduction in annual turnover.
+- Improved employee engagement by 15% by deploying strategic surveys and internal communication programs, enabling proactive and data-driven HR initiatives.
+
+---
+
+## KEY PROJECTS
+
+**AI-Powered HR Resume Screener**
+- Developed an NLP tool using Python and spaCy to automate resume parsing and candidate-to-job-description matching, reducing screening time by 90% and accelerating time-to-hire by 40%.
+- **Technologies:** Python, spaCy, Transformers, BERT, Sentence Transformers, NER.
+
+**Social Media Sentiment Analysis**
+- Built and trained an NLP model to analyse 10,000 tweets with 87% accuracy, providing real-time brand monitoring that saved an estimated 15 hours per week and over £5,000 in annual research costs.
+- **Technologies:** Python, NLTK, TextBlob, VADER, spaCy, Transformers.
+
+**Customer Segmentation (RFM Analysis)**
+- Segmented a database of 973 customers by analysing £685,000 in revenue across 31,000 transactions, enabling the creation of targeted campaigns that improved marketing ROI.
+- **Technologies:** Python, pandas, scikit-learn, K-Means Clustering, RFM.
+
+**AI Competitor Intelligence Analyzer**
+- Deployed an autonomous AI agent using CrewAI and Gemini to monitor competitors, delivering a 20x ROI compared to agency fees and saving 10 hours of manual research weekly.
+- **Technologies:** CrewAI, LangChain, GPT-4, Gemini, BeautifulSoup, Python.
+
+**Marketing Content Generator**
+- Engineered a prompt-based system using GPT-4 to generate brand-aligned marketing copy, increasing content output by 4x and saving 15 hours per week.
+- **Technologies:** GPT-4, Gemini, Prompt Engineering, SEO.
+
+**Employee Engagement & Attrition Analyzer**
+- Used topic modelling and sentiment analysis to analyse employee survey data, saving 40 hours of manual analysis per survey and identifying key attrition risks proactively.
+- **Technologies:** Python, VADER, TextBlob, Transformers, BERTopic.
+
+---
+
+## EDUCATION
+
+**Master of Science, Marketing Management**
+*University of Westminster, London, UK* | Graduated: December 2023
+- Relevant Coursework: Marketing Research Data Analytics, Multiplatform Marketing, Consumer Psychology.
+
+**Bachelor of Business Administration, International Business**
+*St. Joseph's College of Commerce, Bangalore, IN* | Graduated: June 2020
+- Relevant Coursework: Marketing Management, Project Management, International Business.
+
+---
+**Instructions for Perfect PDF Conversion:**
+
+1.  Open this file (`Natasha_Xavier_ATS_Resume.txt`) in a text editor or word processor (like Microsoft Word, Google Docs, or Pages).
+2.  Set the font to a standard, professional choice (e.g., Calibri, Arial, or Times New Roman) at a size of 10.5 or 11 points.
+3.  Ensure margins are set to a standard size (e.g., 1 inch or 2.54 cm on all sides).
+4.  Review to ensure all text fits neatly on a single page. Adjust line spacing or font size slightly if needed, but do not go below 10 points.
+5.  Use the "Save As" or "Export" function and choose the PDF format. Select the option for "Best for printing" or "High Quality" to ensure the formatting is preserved perfectly.

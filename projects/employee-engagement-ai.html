@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Engagement AI | Natasha Xavier</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-accent: #64ffda;
+            --primary-accent-dark: #4ccfa5;
+        }
+
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #047857, #064e3b);
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+        
+        .project-hero .subtitle {
+            font-size: 1.3rem; 
+            max-width: 800px; 
+            margin: 0 auto;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .project-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .content-section {
+            margin-bottom: 80px;
+        }
+
+        .content-section h2 {
+            font-size: 2.2rem;
+            color: var(--text-primary);
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary-accent);
+            padding-left: 20px;
+            font-weight: 700;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            border-top: 3px solid var(--primary-accent);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-accent);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .tool-badge {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tool-badge:hover {
+            background: var(--primary-accent);
+            color: #064e3b;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary-accent);
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all var(--transition-fast);
+            font-size: 1.1rem;
+        }
+
+        .back-link:hover {
+            gap: 15px;
+            color: var(--primary-accent-dark);
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .feature-card h3 {
+            font-size: 1.4rem;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+
+        .feature-card ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        
+        .feature-card ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .feature-card ul li::before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 4px;
+            color: var(--primary-accent);
+        }
+
+        pre {
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+            padding: 20px;
+            border-radius: var(--radius-md);
+            overflow-x: auto;
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-size: 0.9rem;
+            margin: 20px 0;
+            border: 1px solid var(--bg-tertiary);
+        }
+
+        code .token.keyword { color: #c586c0; }
+        code .token.string { color: #ce9178; }
+        code .token.comment { color: #6a9955; }
+        code .token.function { color: #dcdcaa; }
+        code .token.number { color: #b5cea8; }
+        code .token.operator { color: #d4d4d4; }
+        
+        .visualization-placeholder {
+            background: var(--bg-secondary);
+            border: 2px dashed var(--bg-tertiary);
+            border-radius: var(--radius-lg);
+            padding: 40px;
+            text-align: center;
+            margin: 20px 0;
+            color: var(--text-secondary);
+        }
+        .visualization-placeholder i {
+            font-size: 3rem;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <nav style='background: #1a1a1a; padding: 15px; border-radius: 5px; margin-bottom: 30px;'>
+        <a href='../index.html' style='color: #64ffda; text-decoration: none; font-weight: 600; margin-right: 20px;'>← Back to Home</a>
+        <a href='https://github.com/natashaxavier/employee-engagement-ai' target='_blank' style='color: #64ffda; text-decoration: none; font-weight: 600;'>
+            <i class='fab fa-github'></i> View on GitHub
+        </a>
+    </nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">Natasha Xavier</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div>
+            <h1>AI-Powered Employee Engagement Analysis</h1>
+            <p class="subtitle">
+                A sophisticated People Analytics tool designed for the UK HR Tech landscape, leveraging NLP and predictive modeling to transform employee feedback into strategic, actionable insights.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <a href="../index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <!-- The Challenge -->
+        <section class="content-section">
+            <h2>The Challenge: Unlocking Value from Employee Feedback</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                In the UK's competitive talent market, understanding employee sentiment is critical. However, HR departments spend an average of 40+ hours manually sifting through thousands of open-ended survey responses. This process is slow, subjective, and often fails to uncover the deep, actionable insights needed to improve retention, productivity, and workplace culture. The result is missed opportunities and a reactive approach to employee engagement.
+            </p>
+        </section>
+
+        <!-- The Solution -->
+        <section class="content-section">
+            <h2>The Solution: An Automated Intelligence Layer</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                This Employee Engagement Analyzer is an AI-powered solution that automates the entire analysis pipeline. It ingests raw survey data (CSV, Excel) and applies advanced Natural Language Processing (NLP) to classify sentiment, identify key themes, and predict attrition risks in real-time. The system delivers a comprehensive dashboard with clear visualizations, enabling HR leaders to move from data collection to strategic action in hours, not weeks.
+            </p>
+        </section>
+
+        <!-- Business Impact -->
+        <section class="content-section">
+            <h2>Business Impact & ROI</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">£20k+</div>
+                    <div class="metric-label">Annual Savings vs Manual Analysis</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">>40</div>
+                    <div class="metric-label">Hours Saved Per Survey Cycle</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15%</div>
+                    <div class="metric-label">Projected Reduction in Attrition</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">20x</div>
+                    <div class="metric-label">ROI on Engagement Initiatives</div>
+                </div>
+            </div>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem; margin-top: 20px;">
+                By automating the work of a People Analytics Specialist (average UK salary £45k-£70k), this tool provides enterprise-level insights at a fraction of the cost. It empowers managers with team-specific data, enabling targeted interventions that directly boost retention and save significant recruitment costs.
+            </p>
+        </section>
+
+        <!-- Technical Deep Dive -->
+        <section class="content-section">
+            <h2>Technical Deep Dive</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-robot"></i> NLP & Sentiment Analysis</h3>
+                    <ul>
+                        <li>Utilizes transformer models for nuanced sentiment classification (Positive, Negative, Neutral).</li>
+                        <li>Applies VADER for lexicon-based scoring, ideal for social-media-style text.</li>
+                        <li>Detects discrete emotions (e.g., Joy, Anger, Surprise) for deeper insights.</li>
+                        <li>Performs statistical significance testing on sentiment shifts.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-project-diagram"></i> Topic & Theme Extraction</h3>
+                    <ul>
+                        <li>Employs BERTopic for clustering feedback into coherent themes.</li>
+                        <li>Generates interactive word clouds for quick visualization of key terms.</li>
+                        <li>Tracks topic prevalence over time to identify emerging trends.</li>
+                        <li>Correlates topics with sentiment scores to pinpoint specific pain points.</li>
+                    </ul>
+                </div>
+            </div>
+            <pre><code class="language-python">
+# Example: Sentiment Analysis & Topic Modeling with Python
+import pandas as pd
+from textblob import TextBlob
+from bertopic import BERTopic
+
+# Load survey data
+df = pd.read_csv('employee_survey.csv')
+
+# 1. Sentiment Analysis
+def get_sentiment(text):
+    # Returns polarity score from -1 (Negative) to 1 (Positive)
+    return TextBlob(text).sentiment.polarity
+
+df['sentiment_score'] = df['open_feedback'].apply(get_sentiment)
+
+# 2. Topic Modeling
+docs = df['open_feedback'].tolist()
+topic_model = BERTopic(verbose=True, embedding_model="all-MiniLM-L6-v2")
+topics, probs = topic_model.fit_transform(docs)
+
+# Visualize top topics
+topic_model.visualize_barchart(top_n_topics=10)
+            </code></pre>
+        </section>
+
+        <!-- Visualizations -->
+        <section class="content-section">
+            <h2>Dashboards & Visualizations</h2>
+            <div class="feature-grid">
+                <div class="visualization-placeholder">
+                    <i class="fas fa-tachometer-alt"></i>
+                    <h4>Engagement Score Dashboard</h4>
+                    <p>Real-time eNPS gauge and overall engagement score.</p>
+                </div>
+                <div class="visualization-placeholder">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>Sentiment Trend Lines</h4>
+                    <p>Tracks sentiment fluctuations over time across departments.</p>
+                </div>
+                <div class="visualization-placeholder">
+                    <i class="fas fa-th"></i>
+                    <h4>Department Comparison Heatmap</h4>
+                    <p>Compares engagement drivers and scores across business units.</p>
+                </div>
+                 <div class="visualization-placeholder">
+                    <i class="fas fa-cloud"></i>
+                    <h4>Interactive Word Clouds</h4>
+                    <p>Visualizes key themes from open-ended feedback.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- HR Applications -->
+        <section class="content-section">
+            <h2>HR & People Analytics Applications</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-bullseye"></i> Strategic Insights</h3>
+                    <ul>
+                        <li>Prioritize interventions by identifying teams with the lowest sentiment.</li>
+                        <li>Analyze exit interview data to uncover root causes of turnover.</li>
+                        <li>Assess company culture and track DEI sentiment across demographics.</li>
+                        <li>Benchmark engagement scores against industry standards.</li>
+                    </ul>
+                </div>
+                <div class="feature-card">
+                    <h3><i class="fas fa-cogs"></i> Automated Operations</h3>
+                    <ul>
+                        <li>Automate survey design and distribution schedules.</li>
+                        <li>Set up real-time alerts for significant dips in sentiment.</li>
+                        <li>Generate actionable recommendations for managers to improve team health.</li>
+                        <li>Integrate with HRIS (e.g., Workday, BambooHR) for holistic analysis.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section class="content-section">
+            <h2>Tools & Technologies Used</h2>
+            <div class="tools-used">
+                <span class="tool-badge"><i class="fab fa-python"></i> Python</span>
+                <span class="tool-badge"><i class="fas fa-brain"></i> Transformers</span>
+                <span class="tool-badge"><i class="fas fa-cogs"></i> Scikit-learn</span>
+                <span class="tool-badge"><i class="fas fa-chart-bar"></i> NLTK & TextBlob</span>
+                <span class="tool-badge"><i class="fas fa-file-csv"></i> Pandas & NumPy</span>
+                <span class="tool-badge"><i class="fas fa-database"></i> SQL</span>
+                <span class="tool-badge"><i class="fas fa-chart-pie"></i> Tableau</span>
+                <span class="tool-badge"><i class="fas fa-cloud"></i> BERTopic</span>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--bg-secondary); border-radius: var(--radius-xl);">
+            <h3 style="color: var(--text-primary); margin-bottom: 20px;">Ready to build a more engaged and productive workforce?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                Let's discuss how AI-driven People Analytics can unlock the full potential of your team.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary" style="background-color: var(--primary-accent); color: #064e3b;">
+                <span>Get In Touch</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Natasha Xavier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

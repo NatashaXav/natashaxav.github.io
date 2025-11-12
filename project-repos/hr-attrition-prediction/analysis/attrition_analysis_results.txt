@@ -1,0 +1,36 @@
+HR ATTRITION PREDICTION - ANALYSIS RESULTS
+============================================================
+
+Dataset: IBM HR Analytics Employee Attrition
+Total Employees: 1,470
+Analysis Date: 2025-01-11
+
+OVERALL ATTRITION
+------------------------------------------------------------
+Attrition Rate: 16.1%
+Employees Left: 237
+Employees Retained: 1233
+
+KEY ATTRITION DRIVERS
+------------------------------------------------------------
+
+1. OVERTIME IMPACT
+   With Overtime: 30.5% attrition
+   Without Overtime: 10.4% attrition
+   Difference: 20.1 percentage points
+
+2. JOB SATISFACTION
+   Level 1: 22.8% attrition
+   Level 2: 16.4% attrition
+   Level 3: 16.5% attrition
+   Level 4: 11.3% attrition
+
+3. DEPARTMENT BREAKDOWN
+   Sales: 20.6% attrition
+   Human Resources: 19.0% attrition
+   Research & Development: 13.8% attrition
+
+4. INCOME ANALYSIS
+   Employees who left: $4,787/month avg
+   Employees who stayed: $6,833/month avg
+   Difference: $2,046/month

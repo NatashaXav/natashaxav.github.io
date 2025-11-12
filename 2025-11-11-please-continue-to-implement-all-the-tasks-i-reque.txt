@@ -1,0 +1,19 @@
+
+ ▐▛███▜▌   Claude Code v2.0.37
+▝▜█████▛▘  Sonnet 4.5 · Claude Pro
+  ▘▘ ▝▝    /Users/rj/Claude_code/natash
+═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ Conversation compacted · ctrl+o for history ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+  ⎿  Read create_final_resume_docx.py (352 lines)
+  ⎿  Read Natasha_Xavier_Resume_Final.txt (66 lines)
+  ⎿  Read create_professional_resume.py (370 lines)
+  ⎿  Read Natasha_Xavier_Resume_Restructured.txt (67 lines)
+  ⎿  Read .gitignore (49 lines)
+  ⎿  Todo list read (8 items)
+  ⎿  Session limit reached ∙ resets 3am
+     /upgrade to increase your usage limit.
+
+> /cost 
+  ⎿  With your Claude Pro subscription, no need to monitor cost — your subscription includes Claude Code usage
+
+
+

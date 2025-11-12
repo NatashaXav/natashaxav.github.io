@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Report: Customer Segmentation using RFM Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #111827;
+            --bg-secondary: #1F2937;
+            --text-primary: #F9FAFB;
+            --text-secondary: #D1D5DB;
+            --border-color: #374151;
+            --accent-color: #3B82F6;
+            --code-bg: #0d1117;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--bg-secondary);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        code {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 85%;
+        }
+        pre code {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            font-size: inherit;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: var(--bg-secondary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html#projects">← Back to Portfolio</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Technical Report: Customer Segmentation using RFM Analysis</h1>
+
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>In a competitive market, understanding and catering to customer needs is paramount. However, treating all customers as a monolithic group is inefficient and ineffective. Customer segmentation, the practice of dividing a customer base into groups of individuals that are similar in specific ways, allows businesses to tailor marketing efforts, product development, and service strategies to meet the distinct needs of each group. This leads to higher customer satisfaction, increased loyalty, and ultimately, greater profitability.</p>
+                <p>This report presents a detailed analysis of a customer dataset using the <strong>RFM (Recency, Frequency, Monetary)</strong> framework. RFM is a powerful, behavior-based segmentation technique that groups customers based on their transaction history. By analyzing 973 unique customers who generated a total of £685,000 in revenue, this project identifies distinct customer segments and provides actionable strategies for each. The goal is to move beyond simple descriptive analytics and provide a strategic tool for data-driven decision-making.</p>
+            </section>
+
+            <section id="problem-statement">
+                <h2>2. Problem Statement</h2>
+                <p>A business with a diverse customer base faces the challenge of allocating its marketing and retention resources effectively. A one-size-fits-all approach often results in wasted marketing spend on disengaged customers and missed opportunities to nurture high-value ones. The central problem is the lack of a systematic way to differentiate customers based on their value and engagement level.</p>
+                <p>The objective of this project is to answer the following key questions:</p>
+                <ul>
+                    <li>Who are our most valuable customers?</li>
+                    <li>Which customers are at risk of churning?</li>
+                    <li>Which customers have the potential to become more valuable?</li>
+                    <li>How can we tailor our marketing strategies to the unique behavior of different customer groups?</li>
+                </ul>
+                <p>By implementing RFM analysis, we aim to transform raw transactional data into a clear, segmented view of the customer base, enabling targeted and personalized engagement strategies.</p>
+            </section>
+
+            <section id="methodology">
+                <h2>3. Methodology and Technical Approach</h2>
+                <p>The RFM model is based on the marketing principle that 80% of business comes from 20% of customers. It quantifies customer behavior along three dimensions:</p>
+                <ul>
+                    <li><strong>Recency (R):</strong> How recently did the customer make a purchase? Customers who purchased recently are more likely to purchase again.</li>
+                    <li><strong>Frequency (F):</strong> How often do they purchase? Customers who purchase frequently are more engaged and loyal.</li>
+                    <li><strong>Monetary (M):</strong> How much do they spend? Customers who spend more are more valuable to the business.</li>
+                </ul>
+
+                <h3>3.1 Calculating RFM Values</h3>
+                <p>The first step was to calculate the R, F, and M values for each of the 973 customers from the raw transaction data.</p>
+                <ol>
+                    <li><strong>Recency:</strong> For each customer, we calculated the number of days between their last purchase and a snapshot date (typically the day after the last transaction in the dataset). A lower value indicates higher recency.</li>
+                    <li><strong>Frequency:</strong> This was calculated as the total number of unique transactions made by each customer. A higher value is better.</li>
+                    <li><strong>Monetary:</strong> This is the sum of the total revenue generated by each customer across all their transactions. A higher value is better.</li>
+                </ol>
+
+                <h3>3.2 Scoring and Segmentation</h3>
+                <p>Once the raw RFM values were calculated, they were converted into scores to allow for easier comparison and segmentation. This was done by dividing the customer base into quintiles for each RFM dimension. For example, the 20% of customers with the most recent purchases receive a Recency score of 5, the next 20% receive a score of 4, and so on. The same logic was applied to Frequency and Monetary values.</p>
+                <p>This scoring system results in each customer having an RFM score profile (e.g., 555, 111, 345). While combining these scores can create 125 different segments, this is too granular for practical marketing applications. Therefore, we defined <strong>6 key segments</strong> based on the combination of these scores, which provides a more manageable and strategic overview.</p>
+            </section>
+
+            <section id="data-tools">
+                <h2>4. Data and Tools</h2>
+                <h3>4.1 Dataset</h3>
+                <p>The analysis was performed on a transactional dataset containing purchase records for an e-commerce business. The dataset covered a specific period and included the following key fields: <strong>CustomerID</strong>, <strong>InvoiceDate</strong>, <strong>Quantity</strong>, and <strong>UnitPrice</strong>. The data encompassed <strong>973 unique customers</strong> and a total revenue of approximately <strong>£685,000</strong>.</p>
+                
+                <h3>4.2 Tools and Libraries</h3>
+                <p>The analysis was conducted using Python and its powerful data analysis libraries.</p>
+                <ul>
+                    <li><strong>Python 3.8:</strong> The core programming language for the analysis.</li>
+                    <li><strong>Pandas:</strong> Essential for data manipulation, cleaning, and aggregation of transactional data to compute RFM values.</li>
+                    <li><strong>NumPy:</strong> Used for numerical operations.</li>
+                    <li><strong>Matplotlib & Seaborn:</strong> Used for creating visualizations to understand the distribution of RFM values and the characteristics of each segment.</li>
+                </ul>
+            </section>
+
+            <section id="implementation">
+                <h2>5. Implementation Details</h2>
+                <p>The implementation involved a series of data transformation and calculation steps performed using Pandas. Below are snippets that illustrate the core logic of the RFM calculation and segmentation process.</p>
+
+                <h3>5.1 Calculating RFM Values</h3>
+                <pre><code>
+import pandas as pd
+import datetime as dt
+
+# Load data
+df = pd.read_csv('ecommerce_data.csv', encoding='ISO-8859-1')
+df['InvoiceDate'] = pd.to_datetime(df['InvoiceDate'])
+df['TotalPrice'] = df['Quantity'] * df['UnitPrice']
+
+# Set snapshot date
+snapshot_date = df['InvoiceDate'].max() + dt.timedelta(days=1)
+
+# Calculate RFM values
+rfm_data = df.groupby('CustomerID').agg({
+    'InvoiceDate': lambda date: (snapshot_date - date.max()).days,
+    'InvoiceNo': 'nunique',
+    'TotalPrice': 'sum'
+})
+
+# Rename columns
+rfm_data.rename(columns={'InvoiceDate': 'Recency',
+                         'InvoiceNo': 'Frequency',
+                         'TotalPrice': 'MonetaryValue'}, inplace=True)
+                </code></pre>
+
+                <h3>5.2 Scoring and Segmentation</h3>
+                <p>Quintiles were used to assign scores from 1 to 5 for each RFM dimension.</p>
+                <pre><code>
+# Create RFM scores
+rfm_data['R_Score'] = pd.qcut(rfm_data['Recency'], 5, labels=[5, 4, 3, 2, 1])
+rfm_data['F_Score'] = pd.qcut(rfm_data['Frequency'].rank(method='first'), 5, labels=[1, 2, 3, 4, 5])
+rfm_data['M_Score'] = pd.qcut(rfm_data['MonetaryValue'], 5, labels=[1, 2, 3, 4, 5])
+
+# Combine scores
+rfm_data['RFM_Score'] = rfm_data['R_Score'].astype(str) + rfm_data['F_Score'].astype(str) + rfm_data['M_Score'].astype(str)
+
+# Define segments
+def assign_segment(df):
+    if df['R_Score'] >= 4 and df['F_Score'] >= 4 and df['M_Score'] >= 4:
+        return 'Champions'
+    elif df['R_Score'] >= 3 and df['F_Score'] >= 3:
+        return 'Loyal Customers'
+    elif df['R_Score'] >= 4 and df['F_Score'] >= 1:
+        return 'Recent Customers'
+    elif df['R_Score'] <= 2 and df['F_Score'] >= 3:
+        return 'At-Risk Customers'
+    elif df['R_Score'] <= 2 and df['F_Score'] <= 2:
+        return 'Hibernating'
+    else:
+        return 'Potential Loyalists'
+
+rfm_data['Segment'] = rfm_data.apply(assign_segment, axis=1)
+                </code></pre>
+            </section>
+
+            <section id="results">
+                <h2>6. Results and Analysis</h2>
+                <p>The analysis successfully categorized the 973 customers into 6 distinct segments, each with unique behavioral patterns. The distribution of customers and revenue across these segments revealed critical insights into the health of the customer base.</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Segment</th>
+                            <th>Customer Count</th>
+                            <th>% of Customers</th>
+                            <th>Total Revenue (£)</th>
+                            <th>% of Revenue</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Champions</td>
+                            <td>155</td>
+                            <td>15.9%</td>
+                            <td>356,200</td>
+                            <td>52.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Loyal Customers</td>
+                            <td>210</td>
+                            <td>21.6%</td>
+                            <td>185,100</td>
+                            <td>27.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Potential Loyalists</td>
+                            <td>183</td>
+                            <td>18.8%</td>
+                            <td>75,350</td>
+                            <td>11.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Recent Customers</td>
+                            <td>85</td>
+                            <td>8.7%</td>
+                            <td>20,550</td>
+                            <td>3.0%</td>
+                        </tr>
+                        <tr>
+                            <td>At-Risk Customers</td>
+                            <td>125</td>
+                            <td>12.8%</td>
+                            <td>34,250</td>
+                            <td>5.0%</td>
+                        </tr>
+                        <tr>
+                            <td>Hibernating</td>
+                            <td>215</td>
+                            <td>22.1%</td>
+                            <td>13,700</td>
+                            <td>2.0%</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>The most striking finding is that <strong>Champions</strong>, who represent just under 16% of the customer base, account for <strong>52% of the total revenue</strong>. This confirms the Pareto principle and highlights the immense importance of this segment.</p>
+            </section>
+
+            <section id="business-applications">
+                <h2>7. Business Applications</h2>
+                <p>The segmentation provides a clear roadmap for targeted actions:</p>
+                <ul>
+                    <li><strong>Champions:</strong> These are the best customers. The focus should be on retention and reward. Offer them exclusive access to new products, loyalty programs, and personalized communication. They are also prime candidates for referral programs.</li>
+                    <li><strong>Loyal Customers:</strong> These are frequent, high-value customers. Engage them with up-selling and cross-selling opportunities. Ask for reviews and feedback to make them feel valued.</li>
+                    <li><strong>Potential Loyalists:</strong> These customers are promising but need nurturing. Offer them membership or loyalty programs and recommend products based on their past purchases to increase their frequency.</li>
+                    <li><strong>Recent Customers:</strong> These are new customers. The onboarding experience is critical. Provide them with support, guidance, and a strong first impression to encourage their next purchase.</li>
+                    <li><strong>At-Risk Customers:</strong> These customers were once frequent or high-spending but have not purchased recently. They need to be reactivated. Target them with personalized promotions and reminders to win them back before they churn.</li>
+                    <li><strong>Hibernating:</strong> These are low-value, infrequent customers who are likely lost. It is generally not cost-effective to invest heavily in this segment. A low-cost, broad-reach campaign might be attempted, but resources are better focused elsewhere.</li>
+                </ul>
+            </section>
+
+            <section id="key-findings">
+                <h2>8. Key Findings</h2>
+                <ul>
+                    <li>The customer base is highly heterogeneous, with a small segment of 'Champions' driving a disproportionately large share of revenue.</li>
+                    <li>RFM analysis provides a clear, data-driven framework for prioritizing marketing and retention efforts.</li>
+                    <li>A significant portion of the customer base (At-Risk and Hibernating) is disengaged, representing both a threat (churn) and an opportunity (reactivation).</li>
+                    <li>The methodology is easily reproducible and can be automated to provide ongoing monitoring of customer migration between segments.</li>
+                </ul>
+            </section>
+
+            <section id="conclusion">
+                <h2>9. Conclusion</h2>
+                <p>This project successfully applied the RFM methodology to segment a customer base, transforming raw transaction data into strategic business intelligence. The analysis revealed distinct customer groups with vastly different behaviors and values, demonstrating that a one-size-fits-all marketing strategy is suboptimal. By understanding the characteristics of each segment, the business can now deploy targeted, personalized, and cost-effective campaigns to enhance customer loyalty, reduce churn, and maximize lifetime value. This RFM framework serves as a foundational tool for building a more sophisticated, data-driven customer relationship management strategy.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

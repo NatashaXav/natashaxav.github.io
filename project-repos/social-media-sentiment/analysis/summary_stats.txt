@@ -1,0 +1,7 @@
+Sentiment Analysis Results
+========================
+
+Total Tweets Analyzed: 10,000
+
+Sentiment Distribution:
+  Negative: 10,000 tweets (100.0%)

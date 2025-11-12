@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Attrition Prediction | Natasha Xavier</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #10B981, #059669);
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            border-left: 4px solid #10B981;
+            padding-left: 20px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #10B981;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .challenge-list, .solution-list, .result-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .challenge-list li, .solution-list li, .result-list li {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background: var(--bg-secondary);
+            border-radius: var(--radius-md);
+            border-left: 4px solid #10B981;
+        }
+
+        .challenge-list li i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .solution-list li i {
+            color: #10B981;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .result-list li i {
+            color: #10B981;
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .tool-badge {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .tool-badge:hover {
+            background: #10B981;
+            color: white;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #10B981;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all var(--transition-fast);
+        }
+
+        .back-link:hover {
+            gap: 15px;
+        }
+        .viz-container {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .viz-container img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+        .viz-container .title {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">Natasha Xavier</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div>
+            <h1>HR Attrition Prediction</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Leveraging Machine Learning to Predict and Mitigate Employee Attrition
+            </p>
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-building"></i>
+                    <span>Personal Project</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span>2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-cogs"></i>
+                    <span>Python, Scikit-learn, Pandas</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <a href="../index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <!-- Overview -->
+        <section class="content-section">
+            <h2>Project Overview</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                This project focuses on building a machine learning model to predict employee attrition. By analyzing various factors such as job satisfaction, salary, and work-life balance, the model can identify employees who are at high risk of leaving the company. This allows HR to proactively intervene and implement retention strategies.
+            </p>
+        </section>
+
+        <!-- Visualizing the Attrition Drivers -->
+        <section class="content-section">
+            <h2>Visualizing the Attrition Drivers</h2>
+            <div class="viz-container">
+                <div class="title">Attrition Drivers Analysis</div>
+                <img src="../project-repos/hr-attrition-prediction/visualizations/attrition-drivers-analysis.png" alt="Attrition Drivers Analysis">
+            </div>
+            <div class="viz-container">
+                <div class="title">Department Attrition Comparison</div>
+                <img src="../project-repos/hr-attrition-prediction/visualizations/department-attrition-comparison.png" alt="Department Attrition Comparison">
+            </div>
+            <div class="viz-container">
+                <div class="title">Risk Factors Correlation</div>
+                <img src="../project-repos/hr-attrition-prediction/visualizations/risk-factors-correlation.png" alt="Risk Factors Correlation">
+            </div>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="content-section">
+            <h2>Key Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">88%</div>
+                    <div class="metric-label">Model Accuracy</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">15%</div>
+                    <div class="metric-label">Potential Reduction in Attrition</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">Top 5</div>
+                    <div class="metric-label">Predictors Identified</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section class="content-section">
+            <h2>Tools & Technologies Used</h2>
+            <div class="tools-used">
+                <span class="tool-badge"><i class="fab fa-python"></i> Python</span>
+                <span class="tool-badge"><i class="fas fa-cogs"></i> Scikit-learn</span>
+                <span class="tool-badge"><i class="fas fa-table"></i> Pandas</span>
+                <span class="tool-badge"><i class="fas fa-chart-bar"></i> Matplotlib</span>
+                <span class="tool-badge"><i class="fas fa-chart-line"></i> Seaborn</span>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--bg-secondary); border-radius: var(--radius-xl);">
+            <h3 style="color: var(--text-primary); margin-bottom: 20px;">Need HR transformation expertise?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                Let's discuss how I can help optimize your HR processes and implement transformative initiatives.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary">
+                <span>Get In Touch</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Natasha Xavier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

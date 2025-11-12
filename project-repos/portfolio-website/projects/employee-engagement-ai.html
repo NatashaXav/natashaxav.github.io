@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Engagement Analyzer | Natasha Xavier</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #10B981, #047857);
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .project-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .project-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .content-section {
+            margin-bottom: 60px;
+        }
+
+        .content-section h2 {
+            font-size: 2rem;
+            color: var(--text-primary);
+            margin-bottom: 20px;
+            border-left: 4px solid #10B981;
+            padding-left: 20px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+
+        .metric-card {
+            background: var(--bg-secondary);
+            padding: 30px;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #10B981;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .tools-used {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 30px 0;
+        }
+
+        .tool-badge {
+            background: var(--bg-tertiary);
+            color: var(--text-primary);
+            padding: 12px 24px;
+            border-radius: var(--radius-lg);
+            font-weight: 600;
+            transition: all var(--transition-fast);
+        }
+
+        .tool-badge:hover {
+            background: #10B981;
+            color: white;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: #10B981;
+            font-weight: 600;
+            margin-bottom: 40px;
+            transition: all var(--transition-fast);
+        }
+
+        .back-link:hover {
+            gap: 15px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="../index.html">Natasha Xavier</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Project Hero -->
+    <section class="project-hero">
+        <div>
+            <h1>Employee Engagement Analyzer</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Analyzes employee survey feedback using AI to uncover actionable insights and sentiment trends, saving 40 hours per survey.
+            </p>
+        </div>
+    </section>
+
+    <!-- Project Content -->
+    <div class="project-content">
+        <a href="../index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            Back to Portfolio
+        </a>
+
+        <!-- Overview -->
+        <section class="content-section">
+            <h2>Project Overview</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                This AI-powered tool automates the analysis of employee engagement surveys. It processes large volumes of qualitative feedback, performing sentiment analysis, topic modeling, and trend identification. The system generates comprehensive reports that highlight key themes, areas of concern, and positive feedback, enabling HR teams to quickly understand employee sentiment and make data-driven decisions to improve the workplace environment.
+            </p>
+        </section>
+
+        <!-- Key Metrics -->
+        <section class="content-section">
+            <h2>Key Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-value">40</div>
+                    <div class="metric-label">Hours Saved Per Survey</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">3x</div>
+                    <div class="metric-label">More Actionable Insights</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">98%</div>
+                    <div class="metric-label">Analysis Accuracy</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-value">24h</div>
+                    <div class="metric-label">Turnaround Time</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section class="content-section">
+            <h2>Tools & Technologies Used</h2>
+            <div class="tools-used">
+                <span class="tool-badge"><i class="fas fa-brain"></i> GPT-4</span>
+                <span class="tool-badge"><i class="fab fa-python"></i> Python</span>
+                <span class="tool-badge"><i class="fas fa-cogs"></i> LangChain</span>
+                <span class="tool-badge"><i class="fas fa-chart-bar"></i> NLTK & SpaCy</span>
+                <span class="tool-badge"><i class="fas fa-file-csv"></i> Data Processing Libraries</span>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--bg-secondary); border-radius: var(--radius-xl);">
+            <h3 style="color: var(--text-primary); margin-bottom: 20px;">Ready to unlock insights from your employee feedback?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                Learn how AI can help you build a more engaged and productive workforce.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary">
+                <span>Get In Touch</span>
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Natasha Xavier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>

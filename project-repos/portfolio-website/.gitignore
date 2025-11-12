@@ -1,0 +1,11 @@
+.env
+*.pyc
+__pycache__/
+.DS_Store
+*.csv
+*.xlsx
+venv/
+env/
+node_modules/
+.vscode/
+*.log

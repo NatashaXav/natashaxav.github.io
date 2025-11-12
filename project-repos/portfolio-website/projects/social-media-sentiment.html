@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Report: Social Media Sentiment Analysis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #111827;
+            --bg-secondary: #1F2937;
+            --text-primary: #F9FAFB;
+            --text-secondary: #D1D5DB;
+            --border-color: #374151;
+            --accent-color: #3B82F6;
+            --code-bg: #0d1117;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: var(--bg-secondary);
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        nav a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        main {
+            padding: 2rem;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            color: var(--text-primary);
+            line-height: 1.3;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 1rem;
+        }
+        h2 {
+            font-size: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 0.5rem;
+        }
+        p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        ul, ol {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-secondary);
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        strong {
+            color: var(--text-primary);
+            font-weight: 600;
+        }
+        blockquote {
+            border-left: 4px solid var(--accent-color);
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        pre {
+            background-color: var(--code-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            overflow-x: auto;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 2rem;
+        }
+        code {
+            font-family: 'Roboto Mono', monospace;
+            background-color: var(--code-bg);
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 85%;
+        }
+        pre code {
+            padding: 0;
+            background-color: transparent;
+            border-radius: 0;
+            font-size: inherit;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 2rem;
+        }
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: var(--bg-secondary);
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html#projects">← Back to Portfolio</a>
+        </nav>
+    </header>
+    <main>
+        <article>
+            <h1>Technical Report: Social Media Sentiment Analysis</h1>
+
+            <section id="introduction">
+                <h2>1. Introduction</h2>
+                <p>In the digital age, social media platforms have become a primary channel for individuals to express their opinions, emotions, and experiences. This vast and unstructured stream of user-generated content represents a goldmine of information for businesses, researchers, and public institutions. Sentiment analysis, a subfield of Natural Language Processing (NLP), provides the tools to systematically extract, quantify, and study the affective states and subjective information from text data. By classifying the polarity of text into positive, negative, or neutral categories, organizations can gain deep insights into public opinion, brand perception, customer satisfaction, and market trends.</p>
+                <p>This report details the end-to-end development of a sentiment analysis model designed to classify the sentiment of tweets. The project leverages a dataset of 10,000 tweets to train and evaluate a machine learning classifier. The primary objective is to build a robust model that can accurately interpret the sentiment of short, informal text, which is often characterized by slang, abbreviations, and complex linguistic nuances. This document provides a comprehensive overview of the problem statement, methodology, implementation details, and the business value derived from such an analysis.</p>
+            </section>
+
+            <section id="problem-statement">
+                <h2>2. Problem Statement</h2>
+                <p>The core problem is to automatically and accurately classify the sentiment of a given tweet as either positive or negative. Social media text presents unique challenges compared to formal text documents:</p>
+                <ul>
+                    <li><strong>Brevity and Noise:</strong> Tweets are limited in length, often containing a high noise-to-signal ratio with slang, typos, and non-standard grammar.</li>
+                    <li><strong>Context Dependency:</strong> The sentiment of a word can be highly context-dependent. Sarcasm and irony are prevalent, making literal interpretations misleading.</li>
+                    <li><strong>Dynamic Language:</strong> Language on social media evolves rapidly, with new memes, slang, and hashtags emerging constantly.</li>
+                </ul>
+                <p>A manual approach to analyzing this data is unfeasible due to the sheer volume and velocity of tweets generated daily. Therefore, the goal is to develop a supervised machine learning model that learns to identify sentiment from a labeled dataset and can then be used to classify new, unseen tweets at scale.</p>
+            </section>
+
+            <section id="methodology">
+                <h2>3. Methodology and Technical Approach</h2>
+                <p>The project followed a standard machine learning workflow, beginning with data preprocessing and culminating in model evaluation. The methodology is designed to transform raw, noisy tweet text into a structured format suitable for a classification algorithm.</p>
+                
+                <h3>3.1 Text Preprocessing</h3>
+                <p>Before feeding the text data into a model, it must be cleaned and normalized. This is arguably the most critical step in any NLP task. The following preprocessing steps were applied:</p>
+                <ol>
+                    <li><strong>Lowercasing:</strong> All text was converted to lowercase to ensure uniformity (e.g., "Happy" and "happy" are treated as the same word).</li>
+                    <li><strong>Removal of URLs, Mentions, and Hashtags:</strong> Twitter-specific artifacts like user mentions (@user), URLs (http://...), and hashtag symbols (#) were removed as they typically do not contribute to the sentiment of the core message. The text of the hashtags was retained.</li>
+                    <li><strong>Tokenization:</strong> The cleaned text was broken down into individual words or "tokens".</li>
+                    <li><strong>Stop Word Removal:</strong> Common words that carry little semantic weight (e.g., "the", "a", "is", "in") were removed using the NLTK library's standard English stop word list.</li>
+                    <li><strong>Stemming:</strong> Words were reduced to their root form using the Porter Stemmer algorithm (e.g., "running", "ran", "runs" all become "run"). This helps to consolidate different forms of a word into a single feature.</li>
+                </ol>
+
+                <h3>3.2 Feature Extraction: TF-IDF</h3>
+                <p>Machine learning models cannot work directly with text. The preprocessed tokens must be converted into numerical vectors. This project employed the <strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong> vectorization technique. TF-IDF reflects how important a word is to a document in a collection or corpus.</p>
+                <ul>
+                    <li><strong>Term Frequency (TF):</strong> Measures how frequently a term appears in a document.</li>
+                    <li><strong>Inverse Document Frequency (IDF):</strong> Measures how important a term is. It diminishes the weight of terms that appear very frequently in the document set and increases the weight of terms that appear rarely.</li>
+                </ul>
+                <p>The combination, TF-IDF, provides a numerical score for each word in each tweet, creating a document-term matrix where rows represent tweets and columns represent the unique words in the vocabulary.</p>
+
+                <h3>3.3 Model Selection and Training</h3>
+                <p>A <strong>Logistic Regression</strong> classifier was chosen for this task. Despite its simplicity, Logistic Regression is a powerful and highly interpretable algorithm for binary classification problems. It performs exceptionally well on sparse datasets like the one generated by TF-IDF and serves as a strong baseline model. The model was trained on 80% of the dataset, with the remaining 20% reserved for testing.</p>
+            </section>
+
+            <section id="data-tools">
+                <h2>4. Data and Tools</h2>
+                <h3>4.1 Dataset</h3>
+                <p>The dataset used for this project is a curated collection of <strong>10,000 tweets</strong>. A key characteristic of this dataset is its balanced nature: it contains exactly 5,000 tweets labeled as positive and 5,000 labeled as negative. This balance is crucial for preventing the model from developing a bias towards the majority class, which can be a common issue in sentiment analysis tasks where one sentiment might be more prevalent than another.</p>
+                
+                <h3>4.2 Tools and Libraries</h3>
+                <p>The entire project was developed in Python, leveraging its rich ecosystem of data science and machine learning libraries.</p>
+                <ul>
+                    <li><strong>Python 3.8:</strong> The core programming language.</li>
+                    <li><strong>Pandas:</strong> Used for data manipulation and loading the dataset from a CSV file into a DataFrame.</li>
+                    <li><strong>NLTK (Natural Language Toolkit):</strong> A fundamental library for NLP tasks, used here for tokenization, stop word removal, and stemming.</li>
+                    <li><strong>Scikit-learn:</strong> The primary machine learning library used for TF-IDF vectorization, splitting the data, training the Logistic Regression model, and evaluating its performance.</li>
+                </ul>
+            </section>
+
+            <section id="implementation">
+                <h2>5. Implementation Details</h2>
+                <p>The implementation process involved writing a Python script to orchestrate the data loading, preprocessing, training, and evaluation steps. Below are key code snippets illustrating the core logic.</p>
+
+                <h3>5.1 Data Preprocessing Function</h3>
+                <p>A function was created to encapsulate all the text cleaning steps. This ensures consistency and reusability.</p>
+                <pre><code>
+import re
+from nltk.corpus import stopwords
+from nltk.stem.porter import PorterStemmer
+from nltk.tokenize import word_tokenize
+
+def preprocess_text(text):
+    # Remove URLs, mentions, and hashtags
+    text = re.sub(r'http\S+|www\S+|https\S+', '', text, flags=re.MULTILINE)
+    text = re.sub(r'\@\w+|\#','', text)
+    
+    # Lowercase
+    text = text.lower()
+    
+    # Tokenize
+    tokens = word_tokenize(text)
+    
+    # Remove stop words and perform stemming
+    ps = PorterStemmer()
+    stop_words = set(stopwords.words('english'))
+    filtered_tokens = [ps.stem(word) for word in tokens if word.isalpha() and word not in stop_words]
+    
+    return " ".join(filtered_tokens)
+                </code></pre>
+
+                <h3>5.2 Model Training Pipeline</h3>
+                <p>Scikit-learn's `Pipeline` object was used to chain the TF-IDF vectorizer and the Logistic Regression classifier. This is a best practice as it prevents data leakage from the test set during the vectorization process.</p>
+                <pre><code>
+from sklearn.model_selection import train_test_split
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.linear_model import LogisticRegression
+from sklearn.pipeline import Pipeline
+from sklearn.metrics import accuracy_score, classification_report
+
+# Assuming 'df' is a pandas DataFrame with 'text' and 'sentiment' columns
+X = df['text']
+y = df['sentiment']
+
+# Apply preprocessing
+X_processed = X.apply(preprocess_text)
+
+# Split data
+X_train, X_test, y_train, y_test = train_test_split(X_processed, y, test_size=0.2, random_state=42, stratify=y)
+
+# Create a pipeline
+pipeline = Pipeline([
+    ('tfidf', TfidfVectorizer(max_features=5000)),
+    ('clf', LogisticRegression(solver='liblinear'))
+])
+
+# Train the model
+pipeline.fit(X_train, y_train)
+
+# Make predictions
+y_pred = pipeline.predict(X_test)
+
+# Evaluate the model
+print(f"Accuracy: {accuracy_score(y_test, y_pred):.4f}")
+print(classification_report(y_test, y_pred))
+                </code></pre>
+            </section>
+
+            <section id="results">
+                <h2>6. Results and Analysis</h2>
+                <p>The model achieved a final accuracy of <strong>86.35%</strong> on the unseen test set of 2,000 tweets. This is a strong result, indicating that the model can generalize well to new data. The detailed classification report provides further insights:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Precision</th>
+                            <th>Recall</th>
+                            <th>F1-Score</th>
+                            <th>Support</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Negative</td>
+                            <td>0.87</td>
+                            <td>0.85</td>
+                            <td>0.86</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td>Positive</td>
+                            <td>0.86</td>
+                            <td>0.87</td>
+                            <td>0.87</td>
+                            <td>1000</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Overall</strong></td>
+                            <td><strong>0.86</strong></td>
+                            <td><strong>0.86</strong></td>
+                            <td><strong>0.86</strong></td>
+                            <td><strong>2000</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>The precision and recall scores are well-balanced for both classes, with F1-scores of 0.86 and 0.87 for negative and positive sentiments, respectively. This demonstrates that the model is equally proficient at identifying both positive and negative tweets and is not biased towards one class. The balanced dataset played a significant role in achieving this result.</p>
+            </section>
+
+            <section id="business-applications">
+                <h2>7. Business Applications</h2>
+                <p>A reliable sentiment analysis model offers immense value across various business functions:</p>
+                <ul>
+                    <li><strong>Brand Monitoring:</strong> Companies can track public sentiment towards their brand, products, and marketing campaigns in real-time, allowing for rapid response to PR crises or positive feedback.</li>
+                    <li><strong>Customer Service:</strong> By analyzing customer support chats, emails, and social media mentions, companies can prioritize urgent negative feedback and identify widespread issues.</li>
+                    <li><strong>Market Research:</strong> Businesses can gauge public reaction to new product launches or competitor activities without the cost and time of traditional surveys.</li>
+                    <li><strong>Product Development:</strong> Analyzing user feedback on existing products can reveal common complaints and desired features, guiding future development efforts.</li>
+                </ul>
+            </section>
+
+            <section id="key-findings">
+                <h2>8. Key Findings</h2>
+                <ul>
+                    <li>A Logistic Regression model, when combined with TF-IDF vectorization and proper text preprocessing, serves as a highly effective baseline for sentiment analysis on tweet data.</li>
+                    <li>The use of a balanced dataset was critical in training an unbiased classifier, resulting in similar performance for both positive and negative classes.</li>
+                    <li>Text preprocessing, including the removal of noise and normalization of words, is a crucial step that significantly impacts model performance.</li>
+                    <li>The model achieved a robust accuracy of 86.35%, demonstrating its practical utility for real-world applications.</li>
+                </ul>
+            </section>
+
+            <section id="conclusion">
+                <h2>9. Conclusion</h2>
+                <p>This project successfully demonstrated the development of a sentiment analysis classifier for social media data. By following a structured methodology of preprocessing, feature extraction, and modeling, we were able to build a model that can accurately discern sentiment from short, informal text. The results are promising and highlight the potential of NLP to unlock actionable insights from unstructured data. Future work could explore more advanced techniques, such as using word embeddings (Word2Vec, GloVe) or transformer-based models (like BERT), which may capture more nuanced semantic relationships and further improve accuracy.</p>
+            </section>
+        </article>
+    </main>
+</body>
+</html>

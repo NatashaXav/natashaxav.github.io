@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics & Insights Framework | Natasha Xavier</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .project-hero {
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #3B82F6, #2563EB);
+            color: white;
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+        .project-hero h1 { font-size: 3rem; margin-bottom: 20px; }
+        .project-meta { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; margin-top: 30px; }
+        .meta-item { display: flex; align-items: center; gap: 10px; }
+        .project-content { max-width: 1000px; margin: 0 auto; padding: 80px 20px; }
+        .content-section { margin-bottom: 60px; }
+        .content-section h2 { font-size: 2rem; color: var(--text-primary); margin-bottom: 20px; border-left: 4px solid #3B82F6; padding-left: 20px; }
+        .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 25px; margin: 40px 0; }
+        .metric-card { background: var(--bg-secondary); padding: 30px; border-radius: var(--radius-lg); text-align: center; box-shadow: var(--shadow-md); transition: all var(--transition-normal); }
+        .metric-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+        .metric-value { font-size: 2.5rem; font-weight: 700; color: #3B82F6; margin-bottom: 10px; }
+        .metric-label { color: var(--text-secondary); font-size: 0.95rem; }
+        .result-list { list-style: none; margin: 20px 0; }
+        .result-list li { display: flex; gap: 15px; margin-bottom: 20px; padding: 20px; background: var(--bg-secondary); border-radius: var(--radius-md); border-left: 4px solid #3B82F6; }
+        .result-list li i { color: #3B82F6; font-size: 1.2rem; margin-top: 3px; }
+        .tools-used { display: flex; flex-wrap: wrap; gap: 15px; margin: 30px 0; }
+        .tool-badge { background: var(--bg-tertiary); color: var(--text-primary); padding: 12px 24px; border-radius: var(--radius-lg); font-weight: 600; transition: all var(--transition-fast); }
+        .tool-badge:hover { background: #3B82F6; color: white; }
+        .back-link { display: inline-flex; align-items: center; gap: 10px; color: #3B82F6; font-weight: 600; margin-bottom: 40px; transition: all var(--transition-fast); }
+        .back-link:hover { gap: 15px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-brand"><a href="../index.html">Natasha Xavier</a></div>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="project-hero">
+        <div>
+            <h1>Analytics & Insights Framework</h1>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Comprehensive analytics implementation driving data-driven decisions and maximizing profitability
+            </p>
+            <div class="project-meta">
+                <div class="meta-item"><i class="fas fa-building"></i><span>Pictures in Motion & Grey Apple</span></div>
+                <div class="meta-item"><i class="fas fa-calendar-alt"></i><span>2022 - Present</span></div>
+                <div class="meta-item"><i class="fas fa-map-marker-alt"></i><span>London, UK / Remote</span></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="project-content">
+        <a href="../index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i>Back to Portfolio
+        </a>
+
+        <section class="content-section">
+            <h2>Project Overview</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8; font-size: 1.05rem;">
+                Implemented comprehensive analytics frameworks using Google Analytics, Hootsuite, SEMrush, and Statista
+                to drive data-driven marketing decisions. Created weekly and monthly reporting systems identifying trends,
+                insights, and optimization opportunities to maximize profitability and campaign effectiveness.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Results</h2>
+            <div class="metrics-grid">
+                <div class="metric-card"><div class="metric-value">Weekly</div><div class="metric-label">Performance Reports</div></div>
+                <div class="metric-card"><div class="metric-value">Multi-Source</div><div class="metric-label">Data Integration</div></div>
+                <div class="metric-card"><div class="metric-value">Actionable</div><div class="metric-label">Insights & Trends</div></div>
+                <div class="metric-card"><div class="metric-value">Profit</div><div class="metric-label">Maximization Focus</div></div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Tools & Technologies Used</h2>
+            <div class="tools-used">
+                <span class="tool-badge"><i class="fas fa-chart-line"></i> Google Analytics</span>
+                <span class="tool-badge"><i class="fas fa-share-alt"></i> Hootsuite</span>
+                <span class="tool-badge"><i class="fas fa-search"></i> SEMrush</span>
+                <span class="tool-badge"><i class="fas fa-database"></i> Statista</span>
+                <span class="tool-badge"><i class="fas fa-chart-bar"></i> Data Visualization Tools</span>
+                <span class="tool-badge"><i class="fas fa-file-excel"></i> Microsoft Excel</span>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2>Strategic Approach</h2>
+            <p style="color: var(--text-secondary); line-height: 1.8;">
+                Established systematic analytics processes integrating data from multiple sources to provide holistic
+                view of marketing performance. Developed custom reporting templates focusing on actionable insights
+                rather than vanity metrics, enabling leadership to make informed strategic decisions about channel
+                investment, content strategy, and campaign optimization.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2>Results & Business Impact</h2>
+            <ul class="result-list">
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Data-Driven Decision Culture:</strong> Weekly and monthly reporting enabled leadership
+                    to make informed strategic decisions based on comprehensive performance data.</div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Trend Identification & Action:</strong> Systematic analysis identified emerging trends
+                    and opportunities enabling proactive strategy adjustments.</div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Profitability Optimization:</strong> Focus on ROI metrics and profitability insights
+                    ensured marketing investments delivered maximum business value.</div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div><strong>Cross-Channel Attribution:</strong> Integrated analytics provided clear understanding
+                    of how different channels contributed to overall marketing success.</div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2>Key Capabilities Developed</h2>
+            <div style="background: var(--bg-secondary); padding: 30px; border-radius: var(--radius-lg);">
+                <ul style="color: var(--text-secondary); line-height: 1.8; list-style-position: inside;">
+                    <li style="margin-bottom: 15px;"><strong style="color: var(--text-primary);">Multi-Platform Analytics Integration:</strong> Combined data from Google Analytics, social platforms, SEO tools, and market research sources</li>
+                    <li style="margin-bottom: 15px;"><strong style="color: var(--text-primary);">Custom Reporting Frameworks:</strong> Developed tailored reports focusing on metrics that matter most to business objectives</li>
+                    <li style="margin-bottom: 15px;"><strong style="color: var(--text-primary);">Trend Analysis & Forecasting:</strong> Identified patterns in data to predict future performance and inform proactive strategy</li>
+                    <li style="margin-bottom: 15px;"><strong style="color: var(--text-primary);">Stakeholder Communication:</strong> Translated complex data into clear, actionable insights for diverse audiences</li>
+                </ul>
+            </div>
+        </section>
+
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: var(--bg-secondary); border-radius: var(--radius-xl);">
+            <h3 style="color: var(--text-primary); margin-bottom: 20px;">Need analytics and insights expertise?</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 30px;">
+                Let's discuss how I can help implement data-driven decision making for your organization.
+            </p>
+            <a href="../index.html#contact" class="btn btn-primary">
+                <span>Get In Touch</span><i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Natasha Xavier. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
